@@ -1,0 +1,72 @@
+body {
+    text-align: center;
+    background-color: #fee1dd
+    font-family: 'Segoe Script', cursive;
+    overflow: hidden;
+}
+
+.container {
+    margin-top: 10%;
+    height: 80vh; /* Set a height limit */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+    padding: 20px;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    font-size: 24px;
+    padding: 12px 24px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #ff1493;
+    color: white;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Love Letter Styling */
+.love-letter {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(255, 20, 147, 0.7);
+    border-radius: 20px;
+    margin: 50px auto;
+    max-width: 700px;
+    max-height: 60vh; /* Set height limit */
+    overflow-y: auto; /* Enable scrolling */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Scroll Down Button */
+.scroll-btn {
+    font-size: 18px;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #ff1493;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.scroll-btn:hover {
+    transform: scale(1.1);
+}
