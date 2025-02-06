@@ -37,6 +37,11 @@ button:hover {
     display: none;
 }
 
+#page2 {
+    margin-top: 5px;  /* Removes extra top margin */
+    padding-top: 5px; /* Ensures no extra padding */
+}
+
 /* Love Letter Styling */
 .love-letter {
     font-size: 20px;
@@ -53,20 +58,52 @@ button:hover {
     font-family: 'Times New Roman', Times, serif;
 }
 
-/* Scroll Down Button */
-.scroll-btn {
-    font-size: 18px;
-    padding: 10px;
-    margin-top: 10px;
-    cursor: pointer;
-    background-color: #ff1493;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: transform 0.3s;
+.hearts {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: pink;
+    transform: rotate(45deg);
+    z-index: 1000;
+    animation: floatUp 3s ease-in-out infinite;
 }
 
-.scroll-btn:hover {
-    transform: scale(1.1);
+/* Create the heart shape with pseudo-elements */
+.hearts::before,
+.hearts::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: pink;
+    border-radius: 50%;
+}
+
+.hearts::before {
+    top: -10px;
+    left: 0;
+}
+
+.hearts::after {
+    top: 0;
+    left: -10px;
+}
+
+/* Floating animation */
+@keyframes floatUp {
+    from {
+        transform: translateY(0) rotate(45deg);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-100px) rotate(45deg);
+        opacity: 0;
+    }
+}
+
+.love-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 80%;
+    border-radius: 10px; 
 }
